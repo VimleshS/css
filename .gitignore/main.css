@@ -1,0 +1,131 @@
+body {
+/*    background-color: grey;*/
+}
+.container {
+/*    background-color: aquamarine;*/
+    margin: auto;
+    width: 80%
+}
+
+/*
+img {
+    float: right;
+    width: 100px;
+    height: 100px;
+}
+*/
+
+.service {
+    float: left;
+    width: 29.33%;
+    margin: 1%;
+    padding: 1%;
+        
+    height: 200px;
+    background-color: lightgrey ;
+}
+
+.service h1 {
+    color: azure;
+}
+
+.content {
+/*    background-color: lightgrey;   this will color services unless we add clear both*/
+/*    clear: both;*/
+    margin-top: 50px; /*this will not work*/
+}
+
+
+/*Using position property*/
+.sometext {
+    background-color: lightgrey;
+    
+    /*position :
+    relative to itself*/
+    position: relative;
+    left: 80px;
+    top: 50px;
+}
+
+.service{
+    position: relative;
+}
+
+.service:nth-child(1){
+    top:5px
+}
+.service:nth-child(2){
+    top:15px
+}
+.service:nth-child(3){
+    top:25px
+}
+
+/*Some fun*/
+/*
+.services{
+    height: 150px;
+    overflow: hidden;
+}
+*/
+
+/*Absolute is with respect to relative position */
+
+.banner {
+    height: 200px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.banner h1 {
+    position: absolute; /*positions with respect to container. */
+    top: 10px;
+/*    left: 10px;*/
+    background-color: blueviolet;
+    color: azure;
+    width: 100%;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+}
+
+
+/*Creating columns in div with plain property */
+.content p {
+    column-count: 3;
+    column-gap: 50px;
+    column-rule: 1px solid red;
+    -webkit-column-count: 3;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 50px;
+    -webkit-column-rule: 1px solid red;
+    text-align: justify;
+}
+
+/*solution 2 for above problem instead of adding clear both to above add a services:after*/
+
+.services:after{
+    content: "demo";
+    clear: both;
+    display: block;
+}
+
+
+.column {
+    float: left;
+    width: 46%;
+    padding: 1%;
+    margin: 1%;
+    background-color: azure;
+}
+
+.columns:after {
+    content: "resume normal docu,m,ent flow after this";
+    clear: both;
+    display: block; 
+}
